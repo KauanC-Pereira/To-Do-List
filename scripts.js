@@ -7,14 +7,15 @@ let listaItens = [];
 function addTasklist() {
     if(listaItens == ''){
         alert("Tem que adicionar alguma tarefa. PORRA")
+        return;
     }
     listaItens.push({
         task: input.value,
         conclude: false
-    })
-    input.value = ''
+    });
+    input.value = '';
 
-    showTask()
+    showTask();
 };
 
 function showTask() {
