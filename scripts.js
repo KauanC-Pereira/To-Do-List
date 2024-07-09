@@ -5,9 +5,9 @@ let listTask = document.querySelector('.list-task');
 let listaItens = [];
 
 function addTasklist() {
-    if(listaItens == ''){
-        alert("Tem que adicionar alguma tarefa. PORRA")
-        return;
+    if (input.value.trim() === '') {
+        alert("Tem que adicionar alguma tarefa. PORRA");
+        return; // Não continua a execução da função
     }
     listaItens.push({
         task: input.value,
@@ -16,7 +16,8 @@ function addTasklist() {
     input.value = '';
 
     showTask();
-};
+}
+
 
 function showTask() {
     let novaLi = ''
